@@ -14,6 +14,10 @@
 		1EA7303F288EABE9009F2809 /* PictureMyWalkTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1EA7303E288EABE9009F2809 /* PictureMyWalkTests.swift */; };
 		1EA73049288EABE9009F2809 /* PictureMyWalkUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1EA73048288EABE9009F2809 /* PictureMyWalkUITests.swift */; };
 		1EA7304B288EABE9009F2809 /* PictureMyWalkUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1EA7304A288EABE9009F2809 /* PictureMyWalkUITestsLaunchTests.swift */; };
+		1EA73058288EAF16009F2809 /* StartView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1EA73057288EAF16009F2809 /* StartView.swift */; };
+		1EA7305A288EB1AA009F2809 /* ImageStreamView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1EA73059288EB1AA009F2809 /* ImageStreamView.swift */; };
+		1EA7305C288EB1ED009F2809 /* ImageStreamViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1EA7305B288EB1ED009F2809 /* ImageStreamViewModel.swift */; };
+		1EA7305F289023CB009F2809 /* Photo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1EA7305E289023CB009F2809 /* Photo.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -44,6 +48,10 @@
 		1EA73044288EABE9009F2809 /* PictureMyWalkUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = PictureMyWalkUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		1EA73048288EABE9009F2809 /* PictureMyWalkUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PictureMyWalkUITests.swift; sourceTree = "<group>"; };
 		1EA7304A288EABE9009F2809 /* PictureMyWalkUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PictureMyWalkUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		1EA73057288EAF16009F2809 /* StartView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StartView.swift; sourceTree = "<group>"; };
+		1EA73059288EB1AA009F2809 /* ImageStreamView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageStreamView.swift; sourceTree = "<group>"; };
+		1EA7305B288EB1ED009F2809 /* ImageStreamViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageStreamViewModel.swift; sourceTree = "<group>"; };
+		1EA7305E289023CB009F2809 /* Photo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Photo.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -74,6 +82,7 @@
 		1EA73021288EABE8009F2809 = {
 			isa = PBXGroup;
 			children = (
+				1EA7305D289023A3009F2809 /* Models */,
 				1EA7302C288EABE8009F2809 /* PictureMyWalk */,
 				1EA7303D288EABE9009F2809 /* PictureMyWalkTests */,
 				1EA73047288EABE9009F2809 /* PictureMyWalkUITests */,
@@ -96,6 +105,9 @@
 			children = (
 				1EA7302D288EABE8009F2809 /* PictureMyWalkApp.swift */,
 				1EA7302F288EABE8009F2809 /* ContentView.swift */,
+				1EA73059288EB1AA009F2809 /* ImageStreamView.swift */,
+				1EA7305B288EB1ED009F2809 /* ImageStreamViewModel.swift */,
+				1EA73057288EAF16009F2809 /* StartView.swift */,
 				1EA73031288EABE8009F2809 /* Assets.xcassets */,
 				1EA73033288EABE8009F2809 /* Preview Content */,
 			);
@@ -125,6 +137,14 @@
 				1EA7304A288EABE9009F2809 /* PictureMyWalkUITestsLaunchTests.swift */,
 			);
 			path = PictureMyWalkUITests;
+			sourceTree = "<group>";
+		};
+		1EA7305D289023A3009F2809 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				1EA7305E289023CB009F2809 /* Photo.swift */,
+			);
+			path = Models;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -257,7 +277,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1EA7305F289023CB009F2809 /* Photo.swift in Sources */,
+				1EA73058288EAF16009F2809 /* StartView.swift in Sources */,
+				1EA7305C288EB1ED009F2809 /* ImageStreamViewModel.swift in Sources */,
 				1EA73030288EABE8009F2809 /* ContentView.swift in Sources */,
+				1EA7305A288EB1AA009F2809 /* ImageStreamView.swift in Sources */,
 				1EA7302E288EABE8009F2809 /* PictureMyWalkApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
