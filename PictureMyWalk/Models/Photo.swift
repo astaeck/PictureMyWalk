@@ -7,8 +7,16 @@
 
 import Foundation
 
-struct Photo: Codable {
+struct PhotoContainer: Decodable {
+    var photos: Photos
+}
+
+struct Photos: Decodable {
+    var photo: [Photo]
+}
+
+struct Photo: Decodable {
     let id: String
-    let serverId: String
     let secret: String
+    let server: String
 }

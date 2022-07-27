@@ -8,11 +8,9 @@
 import SwiftUI
 
 struct ContentView: View {
-    private let viewModel: ImageStreamViewModel = ImageStreamViewModel()
     
     var body: some View {
         ImageStreamView()
-            .environmentObject(viewModel)
     }
 }
 

@@ -8,12 +8,11 @@
 import SwiftUI
 
 struct ImageStreamView: View {
-    @EnvironmentObject var viewModel: ImageStreamViewModel
+    @StateObject var viewModel = ImageStreamViewModel()
 
-    @State private var photos = [Photo]()
-    
     var body: some View {
-        List(photos, id: \.id) { item in
+        List(viewModel.photos, id: \.id) { item in
+            Text(item.id)
 //            Image(uiImage: image)
 //                .resizable()
 //                .aspectRatio(contentMode: .fill)
@@ -21,6 +20,7 @@ struct ImageStreamView: View {
 //                .cornerRadius(8)
 //                .padding(5)
         }
+        .listStyle(.plain)
         .task {
             await viewModel.loadImages()
         }

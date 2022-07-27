@@ -7,10 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		1E5615D928903E72006C141D /* PhotoSearchService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E5615D828903E72006C141D /* PhotoSearchService.swift */; };
 		1EA7302E288EABE8009F2809 /* PictureMyWalkApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1EA7302D288EABE8009F2809 /* PictureMyWalkApp.swift */; };
 		1EA73030288EABE8009F2809 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1EA7302F288EABE8009F2809 /* ContentView.swift */; };
 		1EA73032288EABE8009F2809 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1EA73031288EABE8009F2809 /* Assets.xcassets */; };
-		1EA73035288EABE8009F2809 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1EA73034288EABE8009F2809 /* Preview Assets.xcassets */; };
 		1EA7303F288EABE9009F2809 /* PictureMyWalkTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1EA7303E288EABE9009F2809 /* PictureMyWalkTests.swift */; };
 		1EA73049288EABE9009F2809 /* PictureMyWalkUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1EA73048288EABE9009F2809 /* PictureMyWalkUITests.swift */; };
 		1EA7304B288EABE9009F2809 /* PictureMyWalkUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1EA7304A288EABE9009F2809 /* PictureMyWalkUITestsLaunchTests.swift */; };
@@ -18,6 +18,7 @@
 		1EA7305A288EB1AA009F2809 /* ImageStreamView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1EA73059288EB1AA009F2809 /* ImageStreamView.swift */; };
 		1EA7305C288EB1ED009F2809 /* ImageStreamViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1EA7305B288EB1ED009F2809 /* ImageStreamViewModel.swift */; };
 		1EA7305F289023CB009F2809 /* Photo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1EA7305E289023CB009F2809 /* Photo.swift */; };
+		1EA730612890353A009F2809 /* NetworkLayer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1EA730602890353A009F2809 /* NetworkLayer.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -38,11 +39,11 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		1E5615D828903E72006C141D /* PhotoSearchService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoSearchService.swift; sourceTree = "<group>"; };
 		1EA7302A288EABE8009F2809 /* PictureMyWalk.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PictureMyWalk.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		1EA7302D288EABE8009F2809 /* PictureMyWalkApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PictureMyWalkApp.swift; sourceTree = "<group>"; };
 		1EA7302F288EABE8009F2809 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		1EA73031288EABE8009F2809 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
-		1EA73034288EABE8009F2809 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		1EA7303A288EABE9009F2809 /* PictureMyWalkTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = PictureMyWalkTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		1EA7303E288EABE9009F2809 /* PictureMyWalkTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PictureMyWalkTests.swift; sourceTree = "<group>"; };
 		1EA73044288EABE9009F2809 /* PictureMyWalkUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = PictureMyWalkUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -52,6 +53,7 @@
 		1EA73059288EB1AA009F2809 /* ImageStreamView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageStreamView.swift; sourceTree = "<group>"; };
 		1EA7305B288EB1ED009F2809 /* ImageStreamViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageStreamViewModel.swift; sourceTree = "<group>"; };
 		1EA7305E289023CB009F2809 /* Photo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Photo.swift; sourceTree = "<group>"; };
+		1EA730602890353A009F2809 /* NetworkLayer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkLayer.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -107,19 +109,12 @@
 				1EA7302F288EABE8009F2809 /* ContentView.swift */,
 				1EA73059288EB1AA009F2809 /* ImageStreamView.swift */,
 				1EA7305B288EB1ED009F2809 /* ImageStreamViewModel.swift */,
+				1EA730602890353A009F2809 /* NetworkLayer.swift */,
+				1E5615D828903E72006C141D /* PhotoSearchService.swift */,
 				1EA73057288EAF16009F2809 /* StartView.swift */,
 				1EA73031288EABE8009F2809 /* Assets.xcassets */,
-				1EA73033288EABE8009F2809 /* Preview Content */,
 			);
 			path = PictureMyWalk;
-			sourceTree = "<group>";
-		};
-		1EA73033288EABE8009F2809 /* Preview Content */ = {
-			isa = PBXGroup;
-			children = (
-				1EA73034288EABE8009F2809 /* Preview Assets.xcassets */,
-			);
-			path = "Preview Content";
 			sourceTree = "<group>";
 		};
 		1EA7303D288EABE9009F2809 /* PictureMyWalkTests */ = {
@@ -251,7 +246,6 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				1EA73035288EABE8009F2809 /* Preview Assets.xcassets in Resources */,
 				1EA73032288EABE8009F2809 /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -280,6 +274,8 @@
 				1EA7305F289023CB009F2809 /* Photo.swift in Sources */,
 				1EA73058288EAF16009F2809 /* StartView.swift in Sources */,
 				1EA7305C288EB1ED009F2809 /* ImageStreamViewModel.swift in Sources */,
+				1EA730612890353A009F2809 /* NetworkLayer.swift in Sources */,
+				1E5615D928903E72006C141D /* PhotoSearchService.swift in Sources */,
 				1EA73030288EABE8009F2809 /* ContentView.swift in Sources */,
 				1EA7305A288EB1AA009F2809 /* ImageStreamView.swift in Sources */,
 				1EA7302E288EABE8009F2809 /* PictureMyWalkApp.swift in Sources */,
