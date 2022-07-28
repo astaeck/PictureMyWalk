@@ -19,6 +19,7 @@
 		1EA7305C288EB1ED009F2809 /* ImageStreamViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1EA7305B288EB1ED009F2809 /* ImageStreamViewModel.swift */; };
 		1EA7305F289023CB009F2809 /* Photo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1EA7305E289023CB009F2809 /* Photo.swift */; };
 		1EA730612890353A009F2809 /* NetworkLayer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1EA730602890353A009F2809 /* NetworkLayer.swift */; };
+		1EEC74272892CA5F00A59A25 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1EEC74262892CA5F00A59A25 /* Preview Assets.xcassets */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -54,6 +55,7 @@
 		1EA7305B288EB1ED009F2809 /* ImageStreamViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageStreamViewModel.swift; sourceTree = "<group>"; };
 		1EA7305E289023CB009F2809 /* Photo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Photo.swift; sourceTree = "<group>"; };
 		1EA730602890353A009F2809 /* NetworkLayer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkLayer.swift; sourceTree = "<group>"; };
+		1EEC74262892CA5F00A59A25 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; name = "Preview Assets.xcassets"; path = "../../../../Desktop/Preview Assets.xcassets"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -113,6 +115,7 @@
 				1E5615D828903E72006C141D /* PhotoSearchService.swift */,
 				1EA73057288EAF16009F2809 /* StartView.swift */,
 				1EA73031288EABE8009F2809 /* Assets.xcassets */,
+				1EEC74262892CA5F00A59A25 /* Preview Assets.xcassets */,
 			);
 			path = PictureMyWalk;
 			sourceTree = "<group>";
@@ -246,6 +249,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1EEC74272892CA5F00A59A25 /* Preview Assets.xcassets in Resources */,
 				1EA73032288EABE8009F2809 /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

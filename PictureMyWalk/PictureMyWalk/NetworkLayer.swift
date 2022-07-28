@@ -21,7 +21,7 @@ enum NetworkError: Error {
 }
 
 protocol NetworkLayerProtocol {
-    func perform<T: Decodable>(_ request: URLRequest, responseModel: T.Type) async throws -> T
+    func perform<T: Decodable>(_ request: URLRequest, responseModel: T.Type) async -> Result<T, NetworkError>
 }
 
 class NetworkLayer: NetworkLayerProtocol {
@@ -32,20 +32,22 @@ class NetworkLayer: NetworkLayerProtocol {
         self.urlSession = urlSession
     }
     
-    func perform<T: Decodable>(_ request: URLRequest, responseModel: T.Type) async throws -> T {
-        let (data, response) = try await urlSession.data(for: request)
-        
-        guard let httpResponse = response as? HTTPURLResponse,
-              httpResponse.statusCode == 200 else {
-            throw NetworkError.responseUnsuccessful
-        }
-
+    func perform<T: Decodable>(_ request: URLRequest, responseModel: T.Type) async -> Result<T, NetworkError> {
         do {
-            let decoded: T = try JSONDecoder().decode(responseModel, from: data)
-            return decoded
+            let (data, response) = try await urlSession.data(for: request)
+            
+            guard let httpResponse = response as? HTTPURLResponse,
+                  httpResponse.statusCode == 200 else {
+                return .failure(.responseUnsuccessful)
+            }
+
+            guard let decoded: T = try? JSONDecoder().decode(responseModel, from: data) else {
+                return .failure(.jsonParsingFailure)
+            }
+            return .success(decoded)
         }
         catch {
-            throw NetworkError.jsonParsingFailure
+            return .failure(.requestFailed)
         }
     }
 }

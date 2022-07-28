@@ -19,7 +19,7 @@ class PhotoSearchService {
     }
     
     var base: String {
-        return "https://www.flickr.cm"
+        return "https://www.flickr.com"
     }
     
     var path: String {
@@ -44,11 +44,13 @@ class PhotoSearchService {
         components.queryItems = parameters
         let url = components.url!
         let urlRequest = URLRequest(url: url)
-        do {
-            let data = try await networkLayer.perform(urlRequest, responseModel: PhotoContainer.self)
-            return data.photos.photo
-        }
-        catch {
+        
+        let result = await networkLayer.perform(urlRequest, responseModel: PhotoContainer.self)
+        
+        switch result {
+        case .success(let photos):
+            return photos.photos.photo
+        case .failure:
             return []
         }
     }
