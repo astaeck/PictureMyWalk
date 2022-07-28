@@ -20,6 +20,7 @@
 		1EA7305F289023CB009F2809 /* Photo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1EA7305E289023CB009F2809 /* Photo.swift */; };
 		1EA730612890353A009F2809 /* NetworkLayer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1EA730602890353A009F2809 /* NetworkLayer.swift */; };
 		1EEC74272892CA5F00A59A25 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1EEC74262892CA5F00A59A25 /* Preview Assets.xcassets */; };
+		1EEC74292892DA2700A59A25 /* NetworkError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1EEC74282892DA2700A59A25 /* NetworkError.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -56,6 +57,7 @@
 		1EA7305E289023CB009F2809 /* Photo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Photo.swift; sourceTree = "<group>"; };
 		1EA730602890353A009F2809 /* NetworkLayer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkLayer.swift; sourceTree = "<group>"; };
 		1EEC74262892CA5F00A59A25 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; name = "Preview Assets.xcassets"; path = "../../../../Desktop/Preview Assets.xcassets"; sourceTree = "<group>"; };
+		1EEC74282892DA2700A59A25 /* NetworkError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkError.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -86,7 +88,6 @@
 		1EA73021288EABE8009F2809 = {
 			isa = PBXGroup;
 			children = (
-				1EA7305D289023A3009F2809 /* Models */,
 				1EA7302C288EABE8009F2809 /* PictureMyWalk */,
 				1EA7303D288EABE9009F2809 /* PictureMyWalkTests */,
 				1EA73047288EABE9009F2809 /* PictureMyWalkUITests */,
@@ -108,12 +109,11 @@
 			isa = PBXGroup;
 			children = (
 				1EA7302D288EABE8009F2809 /* PictureMyWalkApp.swift */,
-				1EA7302F288EABE8009F2809 /* ContentView.swift */,
-				1EA73059288EB1AA009F2809 /* ImageStreamView.swift */,
-				1EA7305B288EB1ED009F2809 /* ImageStreamViewModel.swift */,
-				1EA730602890353A009F2809 /* NetworkLayer.swift */,
-				1E5615D828903E72006C141D /* PhotoSearchService.swift */,
-				1EA73057288EAF16009F2809 /* StartView.swift */,
+				1EA7305D289023A3009F2809 /* Models */,
+				1EEC742A2892DA4400A59A25 /* Networking */,
+				1EC54F3F289335EF00A0AB1B /* Services */,
+				1EEC742C2892DC5100A59A25 /* ViewModels */,
+				1EEC742B2892DABB00A59A25 /* Views */,
 				1EA73031288EABE8009F2809 /* Assets.xcassets */,
 				1EEC74262892CA5F00A59A25 /* Preview Assets.xcassets */,
 			);
@@ -143,6 +143,41 @@
 				1EA7305E289023CB009F2809 /* Photo.swift */,
 			);
 			path = Models;
+			sourceTree = "<group>";
+		};
+		1EC54F3F289335EF00A0AB1B /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				1E5615D828903E72006C141D /* PhotoSearchService.swift */,
+			);
+			path = Services;
+			sourceTree = "<group>";
+		};
+		1EEC742A2892DA4400A59A25 /* Networking */ = {
+			isa = PBXGroup;
+			children = (
+				1EA730602890353A009F2809 /* NetworkLayer.swift */,
+				1EEC74282892DA2700A59A25 /* NetworkError.swift */,
+			);
+			path = Networking;
+			sourceTree = "<group>";
+		};
+		1EEC742B2892DABB00A59A25 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				1EA73057288EAF16009F2809 /* StartView.swift */,
+				1EA7302F288EABE8009F2809 /* ContentView.swift */,
+				1EA73059288EB1AA009F2809 /* ImageStreamView.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		1EEC742C2892DC5100A59A25 /* ViewModels */ = {
+			isa = PBXGroup;
+			children = (
+				1EA7305B288EB1ED009F2809 /* ImageStreamViewModel.swift */,
+			);
+			path = ViewModels;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -281,6 +316,7 @@
 				1EA730612890353A009F2809 /* NetworkLayer.swift in Sources */,
 				1E5615D928903E72006C141D /* PhotoSearchService.swift in Sources */,
 				1EA73030288EABE8009F2809 /* ContentView.swift in Sources */,
+				1EEC74292892DA2700A59A25 /* NetworkError.swift in Sources */,
 				1EA7305A288EB1AA009F2809 /* ImageStreamView.swift in Sources */,
 				1EA7302E288EABE8009F2809 /* PictureMyWalkApp.swift in Sources */,
 			);
