@@ -22,6 +22,7 @@ enum PhotoSearchEndpoint: Endpoint {
     var defaultParameters: [URLQueryItem] {
         return [URLQueryItem(name: "method", value: "flickr.photos.search"),
                 URLQueryItem(name: "api_key", value: apiKey),
+                URLQueryItem(name: "geo_context", value: "2"),
                 URLQueryItem(name: "format", value: "json"),
                 URLQueryItem(name: "nojsoncallback", value: "1")]
     }

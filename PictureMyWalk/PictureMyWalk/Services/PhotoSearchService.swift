@@ -14,14 +14,12 @@ class PhotoSearchService {
         self.networkLayer = networkLayer
     }
     
-    func photos(with geoContext: String,
-                      latitude: String,
-                      longitude: String) async -> [Photo] {
+    func photos(withLatitude latitude: Double,
+                longitude: Double) async -> [Photo] {
         
-        let parameters = [URLQueryItem(name: "geo_context", value: geoContext),
-                          URLQueryItem(name: "lat", value: latitude),
-                          URLQueryItem(name: "lon", value: longitude)]
-
+        let parameters = [URLQueryItem(name: "lat", value: "\(latitude)"),
+                          URLQueryItem(name: "lon", value: "\(longitude)")]
+        
         let result = await networkLayer.perform(endpoint: PhotoSearchEndpoint.getPhotoIDs,
                                                 requestParameter: parameters,
                                                 responseModel: PhotoContainer.self)

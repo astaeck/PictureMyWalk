@@ -60,6 +60,7 @@
 		1EA730602890353A009F2809 /* NetworkLayer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkLayer.swift; sourceTree = "<group>"; };
 		1EC54F402893365500A0AB1B /* Endpoint.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Endpoint.swift; sourceTree = "<group>"; };
 		1EC54F422893367500A0AB1B /* PhotoSearchEndpoint.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoSearchEndpoint.swift; sourceTree = "<group>"; };
+		1EC54F4428933AEA00A0AB1B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
 		1EEC74262892CA5F00A59A25 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; name = "Preview Assets.xcassets"; path = "../../../../Desktop/Preview Assets.xcassets"; sourceTree = "<group>"; };
 		1EEC74282892DA2700A59A25 /* NetworkError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkError.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -112,6 +113,7 @@
 		1EA7302C288EABE8009F2809 /* PictureMyWalk */ = {
 			isa = PBXGroup;
 			children = (
+				1EC54F4428933AEA00A0AB1B /* Info.plist */,
 				1EA7302D288EABE8009F2809 /* PictureMyWalkApp.swift */,
 				1EA7305D289023A3009F2809 /* Models */,
 				1EEC742A2892DA4400A59A25 /* Networking */,
@@ -171,9 +173,9 @@
 		1EEC742B2892DABB00A59A25 /* Views */ = {
 			isa = PBXGroup;
 			children = (
-				1EA73057288EAF16009F2809 /* StartView.swift */,
 				1EA7302F288EABE8009F2809 /* ContentView.swift */,
 				1EA73059288EB1AA009F2809 /* ImageStreamView.swift */,
+				1EA73057288EAF16009F2809 /* StartView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -488,6 +490,7 @@
 				DEVELOPMENT_TEAM = 97ZTE25D2E;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = PictureMyWalk/Info.plist;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -517,6 +520,7 @@
 				DEVELOPMENT_TEAM = 97ZTE25D2E;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = PictureMyWalk/Info.plist;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
