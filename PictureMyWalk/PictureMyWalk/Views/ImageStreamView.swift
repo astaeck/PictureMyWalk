@@ -8,8 +8,8 @@
 import SwiftUI
 
 struct ImageStreamView: View {
-    @StateObject private var viewModel = ImageStreamViewModel()
-    
+    @EnvironmentObject var viewModel: ImageStreamViewModel
+
     var body: some View {
         List(viewModel.photos, id: \.id) { photo in
             AsyncImage(

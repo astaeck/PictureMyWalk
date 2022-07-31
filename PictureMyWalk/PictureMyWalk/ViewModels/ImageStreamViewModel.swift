@@ -22,12 +22,14 @@ final class ImageStreamViewModel: NSObject, ObservableObject {
         self.locationManager = locationManager
         
         super.init()
-
+    }
+    
+    func startLocationUpdates() {
         setUpLocationManager()
     }
     
     @MainActor
-    func loadLocationPhotos() {
+    private func loadLocationPhotos() {
         guard let location = location else { return }
 
         Task {

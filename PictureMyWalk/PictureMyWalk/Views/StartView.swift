@@ -8,10 +8,12 @@
 import SwiftUI
 
 struct StartView: View {
+    @EnvironmentObject var viewModel: ImageStreamViewModel
     @Environment(\.dismiss) var dismiss
     
     var body: some View {
-        Button("Start Walk") {
+        Button("Start my Walk") {
+            viewModel.startLocationUpdates()
             dismiss()
         }
         .buttonStyle(.bordered)

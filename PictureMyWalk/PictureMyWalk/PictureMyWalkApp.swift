@@ -9,14 +9,10 @@ import SwiftUI
 
 @main
 struct PictureMyWalkApp: App {
-    @State private var showingSheet = true
 
     var body: some Scene {
         WindowGroup {
             ContentView()
-                .sheet(isPresented: $showingSheet) {
-                    StartView()
-                }
         }
     }
 }

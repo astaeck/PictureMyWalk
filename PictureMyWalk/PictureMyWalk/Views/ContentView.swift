@@ -8,9 +8,15 @@
 import SwiftUI
 
 struct ContentView: View {
-    
+    private let imageStreamViewModel: ImageStreamViewModel = ImageStreamViewModel()
+    @State private var showingSheet = true
+
     var body: some View {
         ImageStreamView()
+            .sheet(isPresented: $showingSheet) {
+                StartView()
+            }
+            .environmentObject(imageStreamViewModel)
     }
 }
 

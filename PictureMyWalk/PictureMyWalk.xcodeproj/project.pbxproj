@@ -113,7 +113,6 @@
 		1EA7302C288EABE8009F2809 /* PictureMyWalk */ = {
 			isa = PBXGroup;
 			children = (
-				1EC54F4428933AEA00A0AB1B /* Info.plist */,
 				1EA7302D288EABE8009F2809 /* PictureMyWalkApp.swift */,
 				1EA7305D289023A3009F2809 /* Models */,
 				1EEC742A2892DA4400A59A25 /* Networking */,
@@ -122,6 +121,7 @@
 				1EEC742B2892DABB00A59A25 /* Views */,
 				1EA73031288EABE8009F2809 /* Assets.xcassets */,
 				1EEC74262892CA5F00A59A25 /* Preview Assets.xcassets */,
+				1EC54F4428933AEA00A0AB1B /* Info.plist */,
 			);
 			path = PictureMyWalk;
 			sourceTree = "<group>";
