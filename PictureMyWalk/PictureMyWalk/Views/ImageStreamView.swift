@@ -12,23 +12,29 @@ struct ImageStreamView: View {
 
     var body: some View {
         List(viewModel.photos, id: \.id) { photo in
-            AsyncImage(
-                url: photo.url,
-                content: { image in
-                    image.resizable()
-                        .scaledToFit()
-                        .clipped()
-                        .cornerRadius(8)
-                        .foregroundColor(.white)
-                        .aspectRatio(contentMode: .fit)
-                        .frame(maxHeight: 350)
-                },
-                placeholder: {
-                    ProgressView()
-                }
-            )
+            HStack {
+                Spacer()
+                AsyncImage(
+                    url: photo.url,
+                    content: { image in
+                        image.resizable()
+                            .scaledToFit()
+                            .clipped()
+                            .cornerRadius(8)
+                            .foregroundColor(.white)
+                            .aspectRatio(contentMode: .fit)
+                            .frame(maxHeight: 300)
+                    },
+                    placeholder: {
+                        ProgressView()
+                            .frame(height: 300)
+                    }
+                )
+                Spacer()
+            }
             .listRowSeparator(.hidden)
         }
+        .animation(.default, value: viewModel.photos)
         .listStyle(.plain)
     }
     

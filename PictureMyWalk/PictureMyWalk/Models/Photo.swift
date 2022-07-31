@@ -15,7 +15,7 @@ struct Photos: Decodable {
     var photo: [Photo]
 }
 
-struct Photo: Decodable {
+struct Photo: Decodable, Equatable {
     let id: String
     let secret: String
     let server: String
