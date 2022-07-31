@@ -11,15 +11,17 @@
 		1EA7302E288EABE8009F2809 /* PictureMyWalkApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1EA7302D288EABE8009F2809 /* PictureMyWalkApp.swift */; };
 		1EA73030288EABE8009F2809 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1EA7302F288EABE8009F2809 /* ContentView.swift */; };
 		1EA73032288EABE8009F2809 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1EA73031288EABE8009F2809 /* Assets.xcassets */; };
-		1EA7303F288EABE9009F2809 /* PictureMyWalkTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1EA7303E288EABE9009F2809 /* PictureMyWalkTests.swift */; };
-		1EA73049288EABE9009F2809 /* PictureMyWalkUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1EA73048288EABE9009F2809 /* PictureMyWalkUITests.swift */; };
-		1EA7304B288EABE9009F2809 /* PictureMyWalkUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1EA7304A288EABE9009F2809 /* PictureMyWalkUITestsLaunchTests.swift */; };
 		1EA73058288EAF16009F2809 /* StartView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1EA73057288EAF16009F2809 /* StartView.swift */; };
 		1EA7305A288EB1AA009F2809 /* ImageStreamView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1EA73059288EB1AA009F2809 /* ImageStreamView.swift */; };
 		1EA7305C288EB1ED009F2809 /* ImageStreamViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1EA7305B288EB1ED009F2809 /* ImageStreamViewModel.swift */; };
 		1EA7305F289023CB009F2809 /* Photo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1EA7305E289023CB009F2809 /* Photo.swift */; };
 		1EA730612890353A009F2809 /* NetworkLayer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1EA730602890353A009F2809 /* NetworkLayer.swift */; };
-		1EABE5EC2896DA16000A9A87 /* LocationService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1EABE5EB2896DA16000A9A87 /* LocationService.swift */; };
+		1EABE5EC2896DA16000A9A87 /* UserLocationService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1EABE5EB2896DA16000A9A87 /* UserLocationService.swift */; };
+		1EABE5F22896F817000A9A87 /* UserLocationServiceTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1EABE5F12896F817000A9A87 /* UserLocationServiceTests.swift */; };
+		1EB94F702897088400433DA5 /* ImageStreamViewModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1EB94F6F2897088400433DA5 /* ImageStreamViewModelTests.swift */; };
+		1EB94F7228970F2000433DA5 /* PhotoSearchServiceTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1EB94F7128970F2000433DA5 /* PhotoSearchServiceTests.swift */; };
+		1EB94F7428974A9200433DA5 /* LocationProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1EB94F7328974A9200433DA5 /* LocationProvider.swift */; };
+		1EB94F7628974ADA00433DA5 /* UserLocationServiceProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1EB94F7528974ADA00433DA5 /* UserLocationServiceProtocol.swift */; };
 		1EC54F412893365500A0AB1B /* Endpoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1EC54F402893365500A0AB1B /* Endpoint.swift */; };
 		1EC54F432893367500A0AB1B /* PhotoSearchEndpoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1EC54F422893367500A0AB1B /* PhotoSearchEndpoint.swift */; };
 		1EEC74292892DA2700A59A25 /* NetworkError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1EEC74282892DA2700A59A25 /* NetworkError.swift */; };
@@ -27,13 +29,6 @@
 
 /* Begin PBXContainerItemProxy section */
 		1EA7303B288EABE9009F2809 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 1EA73022288EABE8009F2809 /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = 1EA73029288EABE8009F2809;
-			remoteInfo = PictureMyWalk;
-		};
-		1EA73045288EABE9009F2809 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = 1EA73022288EABE8009F2809 /* Project object */;
 			proxyType = 1;
@@ -49,16 +44,17 @@
 		1EA7302F288EABE8009F2809 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		1EA73031288EABE8009F2809 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		1EA7303A288EABE9009F2809 /* PictureMyWalkTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = PictureMyWalkTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		1EA7303E288EABE9009F2809 /* PictureMyWalkTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PictureMyWalkTests.swift; sourceTree = "<group>"; };
-		1EA73044288EABE9009F2809 /* PictureMyWalkUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = PictureMyWalkUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		1EA73048288EABE9009F2809 /* PictureMyWalkUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PictureMyWalkUITests.swift; sourceTree = "<group>"; };
-		1EA7304A288EABE9009F2809 /* PictureMyWalkUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PictureMyWalkUITestsLaunchTests.swift; sourceTree = "<group>"; };
 		1EA73057288EAF16009F2809 /* StartView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StartView.swift; sourceTree = "<group>"; };
 		1EA73059288EB1AA009F2809 /* ImageStreamView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageStreamView.swift; sourceTree = "<group>"; };
 		1EA7305B288EB1ED009F2809 /* ImageStreamViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageStreamViewModel.swift; sourceTree = "<group>"; };
 		1EA7305E289023CB009F2809 /* Photo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Photo.swift; sourceTree = "<group>"; };
 		1EA730602890353A009F2809 /* NetworkLayer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkLayer.swift; sourceTree = "<group>"; };
-		1EABE5EB2896DA16000A9A87 /* LocationService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationService.swift; sourceTree = "<group>"; };
+		1EABE5EB2896DA16000A9A87 /* UserLocationService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserLocationService.swift; sourceTree = "<group>"; };
+		1EABE5F12896F817000A9A87 /* UserLocationServiceTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserLocationServiceTests.swift; sourceTree = "<group>"; };
+		1EB94F6F2897088400433DA5 /* ImageStreamViewModelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageStreamViewModelTests.swift; sourceTree = "<group>"; };
+		1EB94F7128970F2000433DA5 /* PhotoSearchServiceTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoSearchServiceTests.swift; sourceTree = "<group>"; };
+		1EB94F7328974A9200433DA5 /* LocationProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationProvider.swift; sourceTree = "<group>"; };
+		1EB94F7528974ADA00433DA5 /* UserLocationServiceProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserLocationServiceProtocol.swift; sourceTree = "<group>"; };
 		1EC54F402893365500A0AB1B /* Endpoint.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Endpoint.swift; sourceTree = "<group>"; };
 		1EC54F422893367500A0AB1B /* PhotoSearchEndpoint.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoSearchEndpoint.swift; sourceTree = "<group>"; };
 		1EC54F4428933AEA00A0AB1B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
@@ -80,13 +76,6 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		1EA73041288EABE9009F2809 /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
@@ -95,7 +84,6 @@
 			children = (
 				1EA7302C288EABE8009F2809 /* PictureMyWalk */,
 				1EA7303D288EABE9009F2809 /* PictureMyWalkTests */,
-				1EA73047288EABE9009F2809 /* PictureMyWalkUITests */,
 				1EA7302B288EABE8009F2809 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -105,7 +93,6 @@
 			children = (
 				1EA7302A288EABE8009F2809 /* PictureMyWalk.app */,
 				1EA7303A288EABE9009F2809 /* PictureMyWalkTests.xctest */,
-				1EA73044288EABE9009F2809 /* PictureMyWalkUITests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -128,18 +115,11 @@
 		1EA7303D288EABE9009F2809 /* PictureMyWalkTests */ = {
 			isa = PBXGroup;
 			children = (
-				1EA7303E288EABE9009F2809 /* PictureMyWalkTests.swift */,
+				1EABE5F12896F817000A9A87 /* UserLocationServiceTests.swift */,
+				1EB94F7128970F2000433DA5 /* PhotoSearchServiceTests.swift */,
+				1EB94F6F2897088400433DA5 /* ImageStreamViewModelTests.swift */,
 			);
 			path = PictureMyWalkTests;
-			sourceTree = "<group>";
-		};
-		1EA73047288EABE9009F2809 /* PictureMyWalkUITests */ = {
-			isa = PBXGroup;
-			children = (
-				1EA73048288EABE9009F2809 /* PictureMyWalkUITests.swift */,
-				1EA7304A288EABE9009F2809 /* PictureMyWalkUITestsLaunchTests.swift */,
-			);
-			path = PictureMyWalkUITests;
 			sourceTree = "<group>";
 		};
 		1EA7305D289023A3009F2809 /* Models */ = {
@@ -155,7 +135,9 @@
 			children = (
 				1E5615D828903E72006C141D /* PhotoSearchService.swift */,
 				1EC54F422893367500A0AB1B /* PhotoSearchEndpoint.swift */,
-				1EABE5EB2896DA16000A9A87 /* LocationService.swift */,
+				1EABE5EB2896DA16000A9A87 /* UserLocationService.swift */,
+				1EB94F7328974A9200433DA5 /* LocationProvider.swift */,
+				1EB94F7528974ADA00433DA5 /* UserLocationServiceProtocol.swift */,
 			);
 			path = Services;
 			sourceTree = "<group>";
@@ -226,24 +208,6 @@
 			productReference = 1EA7303A288EABE9009F2809 /* PictureMyWalkTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
-		1EA73043288EABE9009F2809 /* PictureMyWalkUITests */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = 1EA73054288EABE9009F2809 /* Build configuration list for PBXNativeTarget "PictureMyWalkUITests" */;
-			buildPhases = (
-				1EA73040288EABE9009F2809 /* Sources */,
-				1EA73041288EABE9009F2809 /* Frameworks */,
-				1EA73042288EABE9009F2809 /* Resources */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-				1EA73046288EABE9009F2809 /* PBXTargetDependency */,
-			);
-			name = PictureMyWalkUITests;
-			productName = PictureMyWalkUITests;
-			productReference = 1EA73044288EABE9009F2809 /* PictureMyWalkUITests.xctest */;
-			productType = "com.apple.product-type.bundle.ui-testing";
-		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -259,10 +223,7 @@
 					};
 					1EA73039288EABE9009F2809 = {
 						CreatedOnToolsVersion = 13.4.1;
-						TestTargetID = 1EA73029288EABE8009F2809;
-					};
-					1EA73043288EABE9009F2809 = {
-						CreatedOnToolsVersion = 13.4.1;
+						LastSwiftMigration = 1340;
 						TestTargetID = 1EA73029288EABE8009F2809;
 					};
 				};
@@ -282,7 +243,6 @@
 			targets = (
 				1EA73029288EABE8009F2809 /* PictureMyWalk */,
 				1EA73039288EABE9009F2809 /* PictureMyWalkTests */,
-				1EA73043288EABE9009F2809 /* PictureMyWalkUITests */,
 			);
 		};
 /* End PBXProject section */
@@ -303,13 +263,6 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		1EA73042288EABE9009F2809 /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
@@ -317,6 +270,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1EB94F7428974A9200433DA5 /* LocationProvider.swift in Sources */,
+				1EB94F7628974ADA00433DA5 /* UserLocationServiceProtocol.swift in Sources */,
 				1EA7305F289023CB009F2809 /* Photo.swift in Sources */,
 				1EA73058288EAF16009F2809 /* StartView.swift in Sources */,
 				1EA7305C288EB1ED009F2809 /* ImageStreamViewModel.swift in Sources */,
@@ -327,7 +282,7 @@
 				1EC54F432893367500A0AB1B /* PhotoSearchEndpoint.swift in Sources */,
 				1EEC74292892DA2700A59A25 /* NetworkError.swift in Sources */,
 				1EA7305A288EB1AA009F2809 /* ImageStreamView.swift in Sources */,
-				1EABE5EC2896DA16000A9A87 /* LocationService.swift in Sources */,
+				1EABE5EC2896DA16000A9A87 /* UserLocationService.swift in Sources */,
 				1EA7302E288EABE8009F2809 /* PictureMyWalkApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -336,16 +291,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				1EA7303F288EABE9009F2809 /* PictureMyWalkTests.swift in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		1EA73040288EABE9009F2809 /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				1EA7304B288EABE9009F2809 /* PictureMyWalkUITestsLaunchTests.swift in Sources */,
-				1EA73049288EABE9009F2809 /* PictureMyWalkUITests.swift in Sources */,
+				1EB94F7228970F2000433DA5 /* PhotoSearchServiceTests.swift in Sources */,
+				1EB94F702897088400433DA5 /* ImageStreamViewModelTests.swift in Sources */,
+				1EABE5F22896F817000A9A87 /* UserLocationServiceTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -356,11 +304,6 @@
 			isa = PBXTargetDependency;
 			target = 1EA73029288EABE8009F2809 /* PictureMyWalk */;
 			targetProxy = 1EA7303B288EABE9009F2809 /* PBXContainerItemProxy */;
-		};
-		1EA73046288EABE9009F2809 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = 1EA73029288EABE8009F2809 /* PictureMyWalk */;
-			targetProxy = 1EA73045288EABE9009F2809 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
@@ -548,15 +491,22 @@
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = 97ZTE25D2E;
 				GENERATE_INFOPLIST_FILE = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 15.5;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = Angelina.PictureMyWalkTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/PictureMyWalk.app/PictureMyWalk";
@@ -568,11 +518,17 @@
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = 97ZTE25D2E;
 				GENERATE_INFOPLIST_FILE = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 15.5;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = Angelina.PictureMyWalkTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -580,42 +536,6 @@
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/PictureMyWalk.app/PictureMyWalk";
-			};
-			name = Release;
-		};
-		1EA73055288EABE9009F2809 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
-				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = 97ZTE25D2E;
-				GENERATE_INFOPLIST_FILE = YES;
-				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = Angelina.PictureMyWalkUITests;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_EMIT_LOC_STRINGS = NO;
-				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_TARGET_NAME = PictureMyWalk;
-			};
-			name = Debug;
-		};
-		1EA73056288EABE9009F2809 /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
-				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = 97ZTE25D2E;
-				GENERATE_INFOPLIST_FILE = YES;
-				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = Angelina.PictureMyWalkUITests;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_EMIT_LOC_STRINGS = NO;
-				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_TARGET_NAME = PictureMyWalk;
 			};
 			name = Release;
 		};
@@ -645,15 +565,6 @@
 			buildConfigurations = (
 				1EA73052288EABE9009F2809 /* Debug */,
 				1EA73053288EABE9009F2809 /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		1EA73054288EABE9009F2809 /* Build configuration list for PBXNativeTarget "PictureMyWalkUITests" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				1EA73055288EABE9009F2809 /* Debug */,
-				1EA73056288EABE9009F2809 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

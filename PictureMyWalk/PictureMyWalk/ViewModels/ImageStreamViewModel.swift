@@ -12,10 +12,10 @@ final class ImageStreamViewModel: NSObject, ObservableObject {
     @Published var photos: [Photo] = []
     
     private let photoSearchService: PhotoSearchServiceProtocol
-    private let locationService: LocationService
+    private let locationService: UserLocationServiceProtocol
     
     init(photoSearchService: PhotoSearchServiceProtocol = PhotoSearchService(),
-         locationService: LocationService = LocationService()) {
+         locationService: UserLocationServiceProtocol = UserLocationService()) {
         self.photoSearchService = photoSearchService
         self.locationService = locationService
         
@@ -23,10 +23,14 @@ final class ImageStreamViewModel: NSObject, ObservableObject {
     }
     
     func startLocationUpdates() {
-        locationService.startUpdatingLocation { [weak self] location in
+        locationService.startUpdatingLocation { [weak self] location, error in
             guard let self = self else { return }
-            DispatchQueue.main.async {
-                self.loadLocationPhotosWith(location)
+            if error == nil {
+                DispatchQueue.main.async {
+                    self.loadLocationPhotosWith(location)
+                }
+            } else {
+                print("Location was not updated")
             }
         }
     }
