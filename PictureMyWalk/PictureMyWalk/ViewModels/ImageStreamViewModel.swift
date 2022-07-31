@@ -6,37 +6,39 @@
 //
 
 import SwiftUI
-import Foundation
 import CoreLocation
 
 final class ImageStreamViewModel: NSObject, ObservableObject {
     @Published var photos: [Photo] = []
-    private var location: CLLocation?
     
     private let photoSearchService: PhotoSearchServiceProtocol
-    private let locationManager: CLLocationManager
+    private let locationService: LocationService
     
     init(photoSearchService: PhotoSearchServiceProtocol = PhotoSearchService(),
-         locationManager: CLLocationManager = CLLocationManager()) {
+         locationService: LocationService = LocationService()) {
         self.photoSearchService = photoSearchService
-        self.locationManager = locationManager
+        self.locationService = locationService
         
         super.init()
-        setUpLocationManager()
     }
     
     func startLocationUpdates() {
-        locationManager.startUpdatingLocation()
+        locationService.startUpdatingLocation { [weak self] location in
+            guard let self = self else { return }
+            DispatchQueue.main.async {
+                self.loadLocationPhotosWith(location)
+            }
+        }
     }
     
     func stopLocationUpdates() {
-        locationManager.stopUpdatingLocation()
+        locationService.stopUpdatingLocation()
     }
     
     @MainActor
-    private func loadLocationPhotos() {
+    private func loadLocationPhotosWith(_ location: CLLocation?) {
         guard let location = location else { return }
-
+        
         Task {
             var newPhotos = await photoSearchService.photos(withLatitude: location.coordinate.latitude, longitude: location.coordinate.longitude)
             
@@ -49,29 +51,6 @@ final class ImageStreamViewModel: NSObject, ObservableObject {
                     return
                 }
             }
-        }
-    }
-    
-    private func setUpLocationManager() {
-        self.locationManager.requestAlwaysAuthorization()
-
-        locationManager.pausesLocationUpdatesAutomatically = false
-        locationManager.allowsBackgroundLocationUpdates = true
-        locationManager.showsBackgroundLocationIndicator = true
-        locationManager.activityType = .fitness
-
-        locationManager.desiredAccuracy = kCLLocationAccuracyBest
-        locationManager.distanceFilter = CLLocationDistance(100)
-        locationManager.delegate = self
-    }
-}
-
-extension ImageStreamViewModel: CLLocationManagerDelegate {
-    func locationManager(_ manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
-        guard let location = locations.last else { return }
-        DispatchQueue.main.async {
-            self.location = location
-            self.loadLocationPhotos()
         }
     }
 }
