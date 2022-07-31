@@ -13,19 +13,24 @@ final class ImageStreamViewModel: NSObject, ObservableObject {
     @Published var photos: [Photo] = []
     private var location: CLLocation?
     
-    private let photoSearchService: PhotoSearchService
+    private let photoSearchService: PhotoSearchServiceProtocol
     private let locationManager: CLLocationManager
     
-    init(photoSearchService: PhotoSearchService = PhotoSearchService(),
+    init(photoSearchService: PhotoSearchServiceProtocol = PhotoSearchService(),
          locationManager: CLLocationManager = CLLocationManager()) {
         self.photoSearchService = photoSearchService
         self.locationManager = locationManager
         
         super.init()
+        setUpLocationManager()
     }
     
     func startLocationUpdates() {
-        setUpLocationManager()
+        locationManager.startUpdatingLocation()
+    }
+    
+    func stopLocationUpdates() {
+        locationManager.stopUpdatingLocation()
     }
     
     @MainActor
@@ -49,15 +54,15 @@ final class ImageStreamViewModel: NSObject, ObservableObject {
     
     private func setUpLocationManager() {
         self.locationManager.requestAlwaysAuthorization()
-        locationManager.startUpdatingLocation()
 
         locationManager.pausesLocationUpdatesAutomatically = false
         locationManager.allowsBackgroundLocationUpdates = true
         locationManager.showsBackgroundLocationIndicator = true
+        locationManager.activityType = .fitness
 
-        self.locationManager.desiredAccuracy = kCLLocationAccuracyBest
-        self.locationManager.distanceFilter = CLLocationDistance(100)
-        self.locationManager.delegate = self
+        locationManager.desiredAccuracy = kCLLocationAccuracyBest
+        locationManager.distanceFilter = CLLocationDistance(100)
+        locationManager.delegate = self
     }
 }
 

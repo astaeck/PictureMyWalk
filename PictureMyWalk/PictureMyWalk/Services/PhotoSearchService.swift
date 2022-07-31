@@ -7,7 +7,12 @@
 
 import Foundation
 
-class PhotoSearchService {
+protocol PhotoSearchServiceProtocol {
+    func photos(withLatitude latitude: Double,
+                longitude: Double) async -> [Photo]
+}
+
+class PhotoSearchService: PhotoSearchServiceProtocol {
     let networkLayer: NetworkLayerProtocol
     
     init(networkLayer: NetworkLayerProtocol = NetworkLayer()) {

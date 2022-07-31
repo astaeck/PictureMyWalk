@@ -9,33 +9,47 @@ import SwiftUI
 
 struct ImageStreamView: View {
     @EnvironmentObject var viewModel: ImageStreamViewModel
-
+    @State private var didTapButton: Bool = false
+    
     var body: some View {
-        List(viewModel.photos, id: \.id) { photo in
+        VStack {
             HStack {
                 Spacer()
-                AsyncImage(
-                    url: photo.url,
-                    content: { image in
-                        image.resizable()
-                            .scaledToFit()
-                            .clipped()
-                            .cornerRadius(8)
-                            .foregroundColor(.white)
-                            .aspectRatio(contentMode: .fit)
-                            .frame(maxHeight: 300)
-                    },
-                    placeholder: {
-                        ProgressView()
-                            .frame(height: 300)
-                    }
-                )
-                Spacer()
+                Button(action: {
+                    didTapButton.toggle()
+                    didTapButton ? viewModel.stopLocationUpdates() : viewModel.startLocationUpdates()
+                }) {
+                    Text(didTapButton ? "Start" : "Stop")
+                }
+                .padding()
+                .buttonStyle(.bordered)
             }
-            .listRowSeparator(.hidden)
+            List(viewModel.photos, id: \.id) { photo in
+                HStack {
+                    Spacer()
+                    AsyncImage(
+                        url: photo.url,
+                        content: { image in
+                            image.resizable()
+                                .scaledToFit()
+                                .clipped()
+                                .cornerRadius(8)
+                                .foregroundColor(.white)
+                                .aspectRatio(contentMode: .fit)
+                                .frame(maxHeight: 300)
+                        },
+                        placeholder: {
+                            ProgressView()
+                                .frame(height: 300)
+                        }
+                    )
+                    Spacer()
+                }
+                .listRowSeparator(.hidden)
+            }
+            .animation(.default, value: viewModel.photos)
+            .listStyle(.plain)
         }
-        .animation(.default, value: viewModel.photos)
-        .listStyle(.plain)
     }
     
 }
