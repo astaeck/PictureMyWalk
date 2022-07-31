@@ -19,4 +19,8 @@ struct Photo: Decodable {
     let id: String
     let secret: String
     let server: String
+    
+    var url: URL {
+        return URL(string: "https://live.staticflickr.com/\(server)/\(id)_\(secret)_w.jpg")!
+    }
 }

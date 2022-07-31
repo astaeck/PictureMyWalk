@@ -22,21 +22,40 @@ final class ImageStreamViewModel: NSObject, ObservableObject {
         self.locationManager = locationManager
         
         super.init()
-        self.locationManager.desiredAccuracy = kCLLocationAccuracyBest
-        self.locationManager.distanceFilter = CLLocationDistance(100)
-        self.locationManager.requestWhenInUseAuthorization()
-        
-        self.locationManager.startUpdatingLocation()
-        self.locationManager.delegate = self
+
+        setUpLocationManager()
     }
     
     @MainActor
-    func locationPhotos() {
+    func loadLocationPhotos() {
         guard let location = location else { return }
+
         Task {
-            let newPhotos = await photoSearchService.photos(withLatitude: location.coordinate.latitude, longitude: location.coordinate.longitude).prefix(1)
-            photos.append(contentsOf: newPhotos)
+            var newPhotos = await photoSearchService.photos(withLatitude: location.coordinate.latitude, longitude: location.coordinate.longitude)
+            
+            while true {
+                guard let newPhoto = newPhotos.first else { return }
+                if photos.contains(where: { $0.id == newPhoto.id }) {
+                    newPhotos.removeFirst()
+                } else {
+                    photos.insert(newPhoto, at: 0)
+                    return
+                }
+            }
         }
+    }
+    
+    private func setUpLocationManager() {
+        self.locationManager.requestAlwaysAuthorization()
+        locationManager.startUpdatingLocation()
+
+        locationManager.pausesLocationUpdatesAutomatically = false
+        locationManager.allowsBackgroundLocationUpdates = true
+        locationManager.showsBackgroundLocationIndicator = true
+
+        self.locationManager.desiredAccuracy = kCLLocationAccuracyBest
+        self.locationManager.distanceFilter = CLLocationDistance(100)
+        self.locationManager.delegate = self
     }
 }
 
@@ -45,7 +64,7 @@ extension ImageStreamViewModel: CLLocationManagerDelegate {
         guard let location = locations.last else { return }
         DispatchQueue.main.async {
             self.location = location
-            self.locationPhotos()
+            self.loadLocationPhotos()
         }
     }
 }

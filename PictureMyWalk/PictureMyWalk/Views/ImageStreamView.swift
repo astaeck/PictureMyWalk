@@ -11,8 +11,23 @@ struct ImageStreamView: View {
     @StateObject private var viewModel = ImageStreamViewModel()
     
     var body: some View {
-        List(viewModel.photos, id: \.id) { item in
-            Text(item.id)
+        List(viewModel.photos, id: \.id) { photo in
+            AsyncImage(
+                url: photo.url,
+                content: { image in
+                    image.resizable()
+                        .scaledToFit()
+                        .clipped()
+                        .cornerRadius(8)
+                        .foregroundColor(.white)
+                        .aspectRatio(contentMode: .fit)
+                        .frame(maxHeight: 350)
+                },
+                placeholder: {
+                    ProgressView()
+                }
+            )
+            .listRowSeparator(.hidden)
         }
         .listStyle(.plain)
     }
