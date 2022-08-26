@@ -26,9 +26,7 @@ final class ImageStreamViewModel: NSObject, ObservableObject {
         locationService.startUpdatingLocation { [weak self] location, error in
             guard let self = self else { return }
             if error == nil {
-                DispatchQueue.main.async {
-                    self.loadLocationPhotosWith(location)
-                }
+                self.loadLocationPhotosWith(location)
             } else {
                 print("Location was not updated")
             }
@@ -39,7 +37,6 @@ final class ImageStreamViewModel: NSObject, ObservableObject {
         locationService.stopUpdatingLocation()
     }
     
-    @MainActor
     private func loadLocationPhotosWith(_ location: CLLocation?) {
         guard let location = location else { return }
         
@@ -48,6 +45,7 @@ final class ImageStreamViewModel: NSObject, ObservableObject {
             
             while true {
                 guard let newPhoto = newPhotos.first else { return }
+                
                 if photos.contains(where: { $0.id == newPhoto.id }) {
                     newPhotos.removeFirst()
                 } else {

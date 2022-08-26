@@ -19,6 +19,7 @@ class PhotoSearchService: PhotoSearchServiceProtocol {
         self.networkLayer = networkLayer
     }
     
+    @MainActor
     func photos(withLatitude latitude: Double,
                 longitude: Double) async -> [Photo] {
         
